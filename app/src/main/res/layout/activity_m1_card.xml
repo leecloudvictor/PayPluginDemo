@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_m1_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.umpay.payplugindemo.M1CardActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/bt_search"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="搜卡" />
+
+    <Button
+        android:id="@+id/bt_auth"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="验证密钥" />
+
+    <Button
+        android:id="@+id/bt_readCard"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="读卡" />
+
+    <Button
+        android:id="@+id/bt_writECard"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="写卡" />
+
+
+    <ScrollView
+        android:id="@+id/sc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+
+</LinearLayout>

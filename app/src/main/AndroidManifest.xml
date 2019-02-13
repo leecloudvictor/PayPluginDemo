@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.umpay.payplugindemo">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="com.umpay.payplugin.permission.OPERATION_HARDWARE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <meta-data
+            android:name="UMP_APPID"
+            android:value="02df974b143e458bb2644615e7438547" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ScanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PrintActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CardPayQueryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".RefundStateQueryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".M1CardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ScanQueryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".GetSnActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GetPosCompanyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CardAuthActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".CreditPreauthDoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PreauthDoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CardAuthReverActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CardAuthDoneReverActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NPrintActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MerInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CardAuthQueryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InfoActivity"
+            android:screenOrientation="portrait" />
+        />
+        <activity android:name=".MemberShipCardActivity" />
+        <activity android:name=".ScanRevokeActivity" />
+        <activity android:name=".ScanRefundActivity" />
+        <activity android:name=".BankRevokeActivity" />
+        <activity android:name=".BankRefundActivity" />
+        <activity android:name=".BlueToothActivity" />
+        <activity android:name=".OrderListActivity"></activity>
+        <activity android:name=".GetOutOrderIdActivity"></activity>
+        <activity android:name=".BalanceInquiryActivity"></activity>
+    </application>
+
+</manifest>

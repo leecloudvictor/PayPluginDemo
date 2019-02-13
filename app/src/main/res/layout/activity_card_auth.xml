@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/activity_card_auth"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.umpay.payplugindemo.CardAuthActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预授权金额(分)"
+            />
+
+        <EditText
+            android:id="@+id/et_amount"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:hint="预授权金额"
+            android:inputType="number"
+            android:text="1"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_card_auth"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="银行卡授权"/>
+
+    <Button
+        android:id="@+id/bt_card_rever"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="预授权撤销"/>
+
+    <Button
+        android:id="@+id/bt_card_done"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="预授权完成"/>
+
+    <Button
+        android:id="@+id/bt_card_done_nocard"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="预授权无卡完成"/>
+
+    <Button
+        android:id="@+id/bt_auth_select"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="预授权查询"/>
+
+    <Button
+        android:id="@+id/bt_print"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="打印预授权小票票"/>
+
+    <ScrollView
+        android:id="@+id/sc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </ScrollView>
+
+
+</LinearLayout>

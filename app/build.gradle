@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+
+    defaultConfig {
+        applicationId "com.umpay.payplugindemo"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    //签名
+    signingConfigs {
+        debug {
+            //debug签名的位置
+            storeFile file("debug.keystore")
+        }
+        release {
+            storeFile file("payplugindemo.jks")
+            storePassword "payplugindemo"//密码
+            keyAlias "payplugindemo"//别名
+            keyPassword "payplugindemo"//密码
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+
+        release {
+            signingConfig signingConfigs.release
+        }
+    }
+
+//    applicationVariants.all { variant ->
+//        variant.outputs.each { output ->
+//            def outputFile = output.outputFile
+//            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+////                def fileName = "支付插件Demo" + "${defaultConfig.versionName}.apk"
+//                outputFileName = "支付插件Demo" + "${defaultConfig.versionName}.apk"
+//            }
+//        }
+//    }
+
+//    android.applicationVariants.all { variant ->
+//        variant.outputs.all {
+//            outputFileName = "支付插件Demo${defaultConfig.versionName})}.apk"
+//        }
+//    }
+
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    dependencies {
+        compile fileTree(dir: 'libs', include: ['*.jar'])
+        testCompile 'junit:junit:4.12'
+//        compile(name: 'paysdk-release', ext: 'aar')
+        compile 'com.android.support:appcompat-v7:25.3.1'
+        compile project(':paysdk')
+
+        // 二维码相关
+        compile 'com.journeyapps:zxing-android-embedded:3.0.3@aar'
+        compile 'com.google.zxing:core:3.2.0'
+        // 二维码相关
+        compile 'com.nex3z:flow-layout:1.0.0'
+        compile 'com.alibaba:fastjson:1.1.56.android'
+    }
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/bt_readCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="读取会员卡号" />
+
+    <EditText
+        android:id="@+id/edt_track"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:hint="请输入磁道编号" />
+
+    <EditText
+        android:id="@+id/edt_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:hint="起始位置" />
+
+    <EditText
+        android:id="@+id/edt_end"
+        android:layout_width="wrap_content"
+        android:hint="结束位置"
+        android:visibility="gone"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        />
+</LinearLayout>

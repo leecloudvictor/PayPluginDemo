@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">支付插件demo</string>
+
+    <string-array name="bank">
+        <item>磁条卡-CT</item>
+        <item>IC卡-IC</item>
+        <item>闪付或applepay-YS</item>
+    </string-array>
+    <string-array name="scan">
+        <item>微信-WX</item>
+        <item>支付宝-AL</item>
+        <item>银联二维码-YL</item>
+    </string-array>
+
+    <string-array name="type">
+        <item>微信-WX</item>
+        <item>支付宝-AL</item>
+        <item>银联二维码-YL</item>
+        <item>磁条卡-CT</item>
+        <item>IC卡-IC</item>
+        <item>闪付或applepay-YS</item>
+    </string-array>
+</resources>
