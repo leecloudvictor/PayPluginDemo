@@ -13,6 +13,7 @@ import java.io.Serializable;
 public class PrintBean implements Serializable {
 
 
+
     public static final int WX = 1;
     public static final int YHK = 2;
     public static final int ZFB = 4;
