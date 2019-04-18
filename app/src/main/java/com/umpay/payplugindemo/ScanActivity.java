@@ -22,6 +22,8 @@ import com.umpay.payplugin.bean.RefundRequest;
 import com.umpay.payplugin.bean.ScanPayRequest;
 import com.umpay.payplugin.bean.ScanPayResponse;
 import com.umpay.payplugin.callback.UMScanPayCallback;
+import com.umpay.payplugin.code.PrintCode;
+import com.umpay.payplugin.code.UMScanCode;
 import com.umpay.payplugin.util.FastJsonUtils;
 import com.umpay.payplugin.util.UMPayLog;
 import com.umpay.utils.DeviceUtil;
@@ -126,7 +128,6 @@ public class ScanActivity extends BaseActivity {
                     mediaNo = mediaNo.replace("\n", "");
                     code.setText("");
                     pay(mediaNo);
-
                 }
             }
 
@@ -136,7 +137,7 @@ public class ScanActivity extends BaseActivity {
             }
         });
         amount = getIntent().getStringExtra("amount");
-        orderId= getIntent().getStringExtra("orderId");
+        orderId = getIntent().getStringExtra("orderId");
         tv_amount = (TextView) findViewById(R.id.amount);
         tv_info = (TextView) findViewById(R.id.info);
         tv_amount.setText("支付金额（分）：" + amount);
@@ -243,17 +244,27 @@ public class ScanActivity extends BaseActivity {
         public void onPaySuccess(ScanPayResponse response) {
             //支付成功，订单最终状态
             cancelDialog();
-            scanPayResponse = response;
-            barcodeScannerView.setVisibility(View.INVISIBLE);
-            tv_info.append("\n--------------------------------------------------------------------------------");
-            tv_info.append("\n支付成功，订单最终状态");
-            tv_info.append("\n--------------------------------------------------------------------------------");
-            tv_info.append("\nonPaySuccess：" + FastJsonUtils.toJson(response));
+            if (response.code == UMScanCode.PAY_SUCCESS) {
+
+                scanPayResponse = response;
+                barcodeScannerView.setVisibility(View.INVISIBLE);
+                tv_info.append("\n--------------------------------------------------------------------------------");
+                tv_info.append("\n支付成功，订单最终状态");
+                tv_info.append("\n--------------------------------------------------------------------------------");
+                tv_info.append("\nonPaySuccess：" + FastJsonUtils.toJson(response));
+            }
+            //补充打印信息
+            if (response.code == PrintCode.PRINT_ERROR) {
+                tv_info.append("\n--------------------------------------------------------------------------------");
+                tv_info.append("\nonPaySuccess：" + FastJsonUtils.toJson(response));
+            }
+
         }
 
         @Override
         public void onPayFail(ScanPayResponse response) {
             //支付失败，订单最终状态
+
             cancelDialog();
             barcodeScannerView.setVisibility(View.INVISIBLE);
             tv_info.append("\n--------------------------------------------------------------------------------");
@@ -267,6 +278,7 @@ public class ScanActivity extends BaseActivity {
         @Override
         public void onPayUnknown(ScanPayResponse response) {
             //支付未知，一定要需要继续发起查询操作
+
             cancelDialog();
             barcodeScannerView.setVisibility(View.INVISIBLE);
             tv_info.append("\n--------------------------------------------------------------------------------");

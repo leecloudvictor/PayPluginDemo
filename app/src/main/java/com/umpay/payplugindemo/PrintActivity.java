@@ -170,6 +170,7 @@ public class PrintActivity extends BaseActivity implements View.OnClickListener 
     }
 
     public void saveBitmap() {
+
         Bitmap bm = BitmapFactory.decodeResource(getResources(), R.mipmap.test);
         Log.e(TAG, "保存图片");
 //        String path = Environment.getExternalStorageDirectory().getPath() + "/wk/" + "jpg1.bmp";

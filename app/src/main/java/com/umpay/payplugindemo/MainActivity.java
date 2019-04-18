@@ -162,7 +162,12 @@ public class MainActivity extends BaseActivity {
                 openActivity(BalanceInquiryActivity.class);
             }
         });
-
+        findViewById(R.id.bt_reprint).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity(RePrintActivity.class);
+            }
+        });
 
         UMPay.getInstance().debug(true);
         UMPay.getInstance().bind(getApplicationContext(), new UMBindCallBack() {

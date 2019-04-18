@@ -157,9 +157,8 @@ public class CardActivity extends BaseActivity {
 
 
     private void search() {
+        bankCardPayResponse=null;
         tv_info.setText("");
-
-
         BankCardPayRequest payRequest = new BankCardPayRequest();
         try {
             payRequest.amount = Integer.parseInt(amount);
@@ -216,7 +215,7 @@ public class CardActivity extends BaseActivity {
 
             @Override
             public void onProgressUpdate(BankCardPayResponse response) {
-                bankCardPayResponse = null;
+
                 tv_info.append("\n--------------------------------------------------------------------------------");
                 tv_info.append("\nonProgressUpdate：" + FastJsonUtils.toJson(response));
                 if (UMCardCode.START_DOWNLOAD_KEY == response.code) {

@@ -99,6 +99,7 @@ public class CardAuthReverActivity extends BaseActivity {
                 //重新绑定
                 cancelDialog();
                 reBind(code, msg);
+
             }
 
             @Override

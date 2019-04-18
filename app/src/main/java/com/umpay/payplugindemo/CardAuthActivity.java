@@ -177,6 +177,7 @@ public class CardAuthActivity extends BaseActivity implements View.OnClickListen
         printBean.orderDate = bean.orderDate;
         Print.getInstance(this).printAuth(printBean);
 
+
     }
 
 

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.umpay.payplugindemo.MainActivity">
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.umpay.payplugindemo.MainActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary" />
+        android:background="@color/colorPrimary"/>
 
     <com.nex3z.flowlayout.FlowLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:flChildSpacingForLastRow="align"
-        app:flRowSpacing="5dp">
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     app:flChildSpacingForLastRow="align"
+                                     app:flRowSpacing="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,7 +26,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="支付金额（单位：分）：" />
+                android:text="支付金额（单位：分）："/>
 
             <EditText
                 android:id="@+id/edit_amount"
@@ -36,7 +36,7 @@
                 android:inputType="number"
                 android:maxLength="9"
                 android:singleLine="true"
-                android:text="1" />
+                android:text="1"/>
         </LinearLayout>
 
         <LinearLayout
@@ -47,7 +47,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="默认订单号：" />
+                android:text="默认订单号："/>
 
             <EditText
                 android:id="@+id/orderId"
@@ -56,129 +56,134 @@
                 android:digits="0123456789"
                 android:inputType="number"
                 android:maxLength="64"
-                android:singleLine="true" />
+                android:singleLine="true"/>
         </LinearLayout>
 
         <Button
             android:id="@+id/scan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="扫码付" />
+            android:text="扫码付"/>
 
         <Button
             android:id="@+id/card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="银行卡" />
+            android:text="银行卡"/>
 
 
         <Button
             android:id="@+id/scanQuery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="扫码付订单状态查询" />
+            android:text="扫码付订单状态查询"/>
 
         <Button
             android:id="@+id/cardQuery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="银行卡订单状态查询" />
+            android:text="银行卡订单状态查询"/>
 
         <Button
             android:id="@+id/scanRevoke"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="扫码付撤销" />
+            android:text="扫码付撤销"/>
 
         <Button
             android:id="@+id/scanRefund"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="扫码付退款" />
+            android:text="扫码付退款"/>
 
 
         <Button
             android:id="@+id/bankRevoke"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="银行卡撤销" />
+            android:text="银行卡撤销"/>
 
         <Button
             android:id="@+id/bankRefund"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="银行卡退款" />
+            android:text="银行卡退款"/>
 
         <Button
             android:id="@+id/refundStateQuery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="退款状态查询" />
+            android:text="退款状态查询"/>
 
 
         <Button
             android:id="@+id/bt_M1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="M1卡" />
+            android:text="M1卡"/>
 
 
         <Button
             android:id="@+id/bt_cardAuth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="银行卡预授权" />
+            android:text="银行卡预授权"/>
 
 
         <Button
             android:id="@+id/bt_nprint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="打印（新）" />
+            android:text="打印（新）"/>
 
         <Button
             android:id="@+id/bt_getinfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="获取商户信息" />
+            android:text="获取商户信息"/>
 
         <Button
             android:id="@+id/bt_getsn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="获取POSSN" />
+            android:text="获取POSSN"/>
 
         <Button
             android:id="@+id/bt_getCompany"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="获取POS厂商" />
+            android:text="获取POS厂商"/>
 
         <Button
             android:id="@+id/memberCard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="读会员卡" />
+            android:text="读会员卡"/>
 
         <Button
             android:id="@+id/blueconnect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="蓝牙连接" />
+            android:text="蓝牙连接"/>
         <Button
             android:id="@+id/bt_orderlist"
-            android:text="交易列表"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="交易列表"/>
 
         <Button
             android:id="@+id/bt_out"
-            android:text="外部订单"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="外部订单"/>
 
         <Button
             android:id="@+id/bt_BalanceInquiry"
-            android:text="余额查询"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="余额查询"/>
+        <Button
+            android:id="@+id/bt_reprint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="补打小票"/>
 
     </com.nex3z.flowlayout.FlowLayout>
 </LinearLayout>

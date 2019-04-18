@@ -28,6 +28,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -278,13 +279,21 @@ public class NPrintActivity extends BaseActivity implements View.OnClickListener
         JSONObject jsonObject = new JSONObject();
         try {
             JSONArray jsonArray=new JSONArray();
-            jsonArray.put(PrintUtils.setTwoDimension("www.baidu.com", 1, TWO));
-            jsonArray.put(PrintUtils.setTwoDimension("www.baidu.com", 2, TWO));
-            jsonArray.put(PrintUtils.setTwoDimension("www.baidu.com", 3, TWO));
+            String conytent="联动优势";
+
+//            String ss= URLEncoder.encode(conytent);
+//            Log.e("TAG","endor:"+ss);
+            String utf2GbkString = new String(conytent.getBytes("UTF-8"),"GBK");
+            jsonArray.put(PrintUtils.setTwoDimension(utf2GbkString, 1, TWO));
+//            jsonArray.put(PrintUtils.setTwoDimension(conytent, 1, TWO));
+//            jsonArray.put(PrintUtils.setTwoDimension("www.baidu.com", 2, TWO));
+//            jsonArray.put(PrintUtils.setTwoDimension("www.baidu.com", 3, TWO));
 
             jsonObject.put("spos", jsonArray);
 
         } catch (JSONException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
         return jsonObject;
