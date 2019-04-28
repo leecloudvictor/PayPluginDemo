@@ -23,6 +23,7 @@ public class BalanceInquiryActivity extends BaseActivity {
         setContentView(R.layout.activity_balance_inquiry);
         setToolBar();
         tv_info = (TextView) findViewById(R.id.info);
+
         findViewById(R.id.search_card).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
