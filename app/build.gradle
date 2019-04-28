@@ -35,22 +35,6 @@ android {
         }
     }
 
-//    applicationVariants.all { variant ->
-//        variant.outputs.each { output ->
-//            def outputFile = output.outputFile
-//            if (outputFile != null && outputFile.name.endsWith('.apk')) {
-////                def fileName = "支付插件Demo" + "${defaultConfig.versionName}.apk"
-//                outputFileName = "支付插件Demo" + "${defaultConfig.versionName}.apk"
-//            }
-//        }
-//    }
-
-//    android.applicationVariants.all { variant ->
-//        variant.outputs.all {
-//            outputFileName = "支付插件Demo${defaultConfig.versionName})}.apk"
-//        }
-//    }
-
 }
 repositories {
     flatDir {
@@ -59,10 +43,8 @@ repositories {
     dependencies {
         compile fileTree(dir: 'libs', include: ['*.jar'])
         testCompile 'junit:junit:4.12'
-        compile(name: 'paysdk-release', ext: 'aar')
+        compile(name: 'paysdk20190417', ext: 'aar')
         compile 'com.android.support:appcompat-v7:25.3.1'
-//        compile project(':paysdk')
-
         // 二维码相关
         compile 'com.journeyapps:zxing-android-embedded:3.0.3@aar'
         compile 'com.google.zxing:core:3.2.0'

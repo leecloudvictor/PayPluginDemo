@@ -33,10 +33,12 @@
             android:screenOrientation="portrait"/>
         <activity
             android:name=".CardActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".PrintActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".CardPayQueryActivity"
             android:screenOrientation="portrait"
@@ -61,7 +63,8 @@
         <activity
             android:name=".CardAuthActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden"/>
+            android:windowSoftInputMode="stateHidden"
+        />
         <activity
             android:name=".CreditPreauthDoneActivity"
             android:screenOrientation="portrait"/>
@@ -70,13 +73,16 @@
             android:screenOrientation="portrait"/>
         <activity
             android:name=".CardAuthReverActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".CardAuthDoneReverActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".NPrintActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".MerInfoActivity"
             android:screenOrientation="portrait"/>
@@ -88,10 +94,13 @@
             android:screenOrientation="portrait"/>
         />
         <activity android:name=".MemberShipCardActivity"/>
-        <activity android:name=".ScanRevokeActivity"/>
-        <activity android:name=".ScanRefundActivity"/>
+        <activity android:name=".ScanRevokeActivity"
+                  android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".ScanRefundActivity"
+                  android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".BankRevokeActivity"/>
-        <activity android:name=".BankRefundActivity"/>
+        <activity android:name=".BankRefundActivity"
+                  android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".BlueToothActivity"/>
         <activity android:name=".OrderListActivity"/>
         <activity android:name=".GetOutOrderIdActivity"/>
