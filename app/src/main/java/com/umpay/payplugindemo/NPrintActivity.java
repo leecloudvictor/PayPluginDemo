@@ -355,7 +355,6 @@ public class NPrintActivity extends BaseActivity implements View.OnClickListener
             jsonArray.put(PrintUtils.setStringContent(text, location, textSize));
             jsonArray.put(PrintUtils.setStringContent("订 单 号：02200100000145041917380", location, 2));
             jsonArray.put(PrintUtils.setStringContent("asfaasdasdsdas", location, 2));
-
             jsonObject.put("spos", jsonArray);
 
         } catch (JSONException e) {

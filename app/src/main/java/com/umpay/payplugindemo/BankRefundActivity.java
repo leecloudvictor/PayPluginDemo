@@ -41,6 +41,7 @@ public class BankRefundActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bank_refund);
         setToolBar("银行卡退款");
+
         tv_info = (TextView) findViewById(R.id.info);
         findViewById(R.id.refund).setOnClickListener(new View.OnClickListener() {
             @Override
