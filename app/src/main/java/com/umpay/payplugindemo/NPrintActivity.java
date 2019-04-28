@@ -28,7 +28,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -232,7 +231,6 @@ public class NPrintActivity extends BaseActivity implements View.OnClickListener
         bt_text.setOnClickListener(this);
         bt_line.setOnClickListener(this);
         bt_content.setOnClickListener(this);
-
     }
 
     @Override
@@ -279,21 +277,10 @@ public class NPrintActivity extends BaseActivity implements View.OnClickListener
         JSONObject jsonObject = new JSONObject();
         try {
             JSONArray jsonArray=new JSONArray();
-            String conytent="联动优势";
-
-//            String ss= URLEncoder.encode(conytent);
-//            Log.e("TAG","endor:"+ss);
-            String utf2GbkString = new String(conytent.getBytes("UTF-8"),"GBK");
-            jsonArray.put(PrintUtils.setTwoDimension(utf2GbkString, 1, TWO));
-//            jsonArray.put(PrintUtils.setTwoDimension(conytent, 1, TWO));
-//            jsonArray.put(PrintUtils.setTwoDimension("www.baidu.com", 2, TWO));
-//            jsonArray.put(PrintUtils.setTwoDimension("www.baidu.com", 3, TWO));
-
+            jsonArray.put(PrintUtils.setTwoDimension("www.baidu.com", 2, TWO));
             jsonObject.put("spos", jsonArray);
 
         } catch (JSONException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
         return jsonObject;
@@ -366,12 +353,8 @@ public class NPrintActivity extends BaseActivity implements View.OnClickListener
         try {
             //打印文字
             jsonArray.put(PrintUtils.setStringContent(text, location, textSize));
-            jsonArray.put(PrintUtils.setStringContent("asfasdas", location, 2));
-            jsonArray.put(PrintUtils.setStringContent("asfaasdasdsdas", location, 3));
-            jsonArray.put(PrintUtils.setStringContent("是asfasdas", location, 2));
-            jsonArray.put(PrintUtils.setStringContent("2asfaasdasdsdas", location, 3));
-            jsonArray.put(PrintUtils.setStringContent("3asfasdas", location, 2));
-            jsonArray.put(PrintUtils.setStringContent("4sfaasdasdsdas", location, 3));
+            jsonArray.put(PrintUtils.setStringContent("订 单 号：02200100000145041917380", location, 2));
+            jsonArray.put(PrintUtils.setStringContent("asfaasdasdsdas", location, 2));
 
             jsonObject.put("spos", jsonArray);
 
