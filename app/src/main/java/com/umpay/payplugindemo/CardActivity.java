@@ -31,7 +31,7 @@ import com.umpay.utils.StringUtil;
 import static com.umpay.payplugin.code.UMCardCode.CARD_PAY_SUCCESS;
 
 /**
- * 银行卡支付
+ * 银行卡支付。
  */
 public class CardActivity extends BaseActivity {
 
